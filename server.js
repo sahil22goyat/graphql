@@ -5,6 +5,7 @@ import { User, quotes } from './fakedb.js';
 const typeDefs = gql`
  type Query {
      users: [User]
+     quotes:[quotes]
   }
 
  type User {
@@ -16,12 +17,17 @@ const typeDefs = gql`
     phoneno: Int
   }
 
+ type quotes {
+    quote:String
+    by:Int
+  }
  
 `;
 
 const resolvers = {
   Query: {
     users: () => User,
+    quotes: () => quotes,
   },
 };
 
