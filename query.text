@@ -1,0 +1,62 @@
+//user
+query getuser{
+
+
+user{
+firstname 
+age
+}
+
+
+}
+
+
+//quotes
+query getquotes{
+
+quotes{
+quotes 
+by
+}
+
+
+}
+
+//userbyid
+query getuser{
+
+
+
+userone(id:"1"){
+firstname
+
+
+}
+
+}
+
+//quotebyid
+query getquote{
+
+
+quoteone(id:"2"){
+quote
+
+
+}
+
+}
+//mutation
+mutation {
+  createuser(
+    firstname: "Ram"
+    lastname: "Kumar"
+    email: "ram@ram.com"
+    age: 25
+    phoneno: "9494"
+  ) {
+    id
+    firstname
+    
+  }
+}
